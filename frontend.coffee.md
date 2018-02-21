@@ -1,7 +1,7 @@
 A socket.io server used as front-end for abrasive-ducks
 -------------------------------------------------------
 
-    socketio_frontend = (io,build_client_policy,client_join) ->
+    socketio_frontend = (io,build_client_policy,frontend_join) ->
 
       io.on 'connection', (socket,params) ->
 
@@ -15,7 +15,7 @@ request contains headers such as Cookie, handshake contains headers, query, … 
           .fromEvent 'msg', socket
           .until client_disconnect
 
-        client_sink = client_join client_source, client_policy
+        client_sink = frontend_join client_source, client_policy
 
         client_sink
         .until client_disconnect
