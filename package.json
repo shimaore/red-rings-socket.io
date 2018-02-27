@@ -1,6 +1,6 @@
 {
   "name": "red-rings-socket.io",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A [red-rings](https://github.com/shimaore/red-rings/) component supporting Socket.io.",
   "main": "index.js",
   "scripts": {
