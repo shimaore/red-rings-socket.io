@@ -21,7 +21,7 @@ request contains headers such as Cookie, handshake contains headers, query, … 
         .until client_disconnect
         .filter operation NOTIFY
         .forEach (msg) ->
-          socket.emit 'msg', msg
+          socket.emit 'msg', msg.toJS()
 
         return
 
