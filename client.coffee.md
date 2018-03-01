@@ -14,3 +14,4 @@
         most.fromEvents 'msg', @io
 
     module.exports = RedRingSocketioClient
+    most = require 'most'
