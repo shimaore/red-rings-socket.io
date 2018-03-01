@@ -16,8 +16,8 @@
 
       source_of: (key) ->
         key = fromJS key
-        @source.filter (msg) -> key.equals msg.get 'key'
+        @source.filter (msg) -> Immutable.is key, msg.get 'key'
 
     module.exports = RedRingSocketioClient
     most = require 'most'
-    {fromJS} = require 'immutable'
+    {fromJS} = Immutable = require 'immutable'
