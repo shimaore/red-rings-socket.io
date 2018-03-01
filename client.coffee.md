@@ -11,7 +11,7 @@
         @io.emit 'msg', msg
 
       source_of: (key) ->
-        most.fromEvents 'msg', @io
+        most.fromEvent 'msg', @io
 
     module.exports = RedRingSocketioClient
     most = require 'most'
