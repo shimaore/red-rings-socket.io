@@ -4,7 +4,8 @@
   "description": "A [red-rings](https://github.com/shimaore/red-rings/) component supporting Socket.io.",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm install --only=dev && rm package-lock.json && coffee -c *.coffee.md",
+    "build": "npm install --only=dev && rm package-lock.json && coffee -c *.coffee.md",
+    "prepublishOnly": "npm run build",
     "test": "mocha"
   },
   "repository": {
