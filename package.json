@@ -4,7 +4,7 @@
   "description": "A [red-rings](https://github.com/shimaore/red-rings/) component supporting Socket.io.",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --only=dev && rm package-lock.json && coffee -c *.coffee.md",
+    "build": "npm install --only=dev && rm package-lock.json && coffee -c *.coffee.md && webpack --mode production",
     "prepublishOnly": "npm run build",
     "test": "mocha"
   },
@@ -15,12 +15,15 @@
   "author": "",
   "license": "Unlicense",
   "devDependencies": {
-    "coffeescript": "^2.2.1"
+    "coffeescript": "^2.2.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10"
   },
   "dependencies": {
     "abrasive-ducks-transducers": "^2.0.0",
     "immutable": "^3.8.2",
     "most": "^1.7.3",
-    "red-rings": "^1.1.0"
+    "red-rings": "^1.1.0",
+    "webpack-bundle-analyzer": "^2.11.1"
   }
 }
