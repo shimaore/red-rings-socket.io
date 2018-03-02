@@ -13,7 +13,7 @@ Client
 const socket = io('http://localhost')
 const client = new RedRingSocketioClient(socket)
 
-socket.on( 'connect', () =>
+socket.on( 'ready', () =>
   client
   .receive("legacy-number:${number}")
   .map( (msg) => {
