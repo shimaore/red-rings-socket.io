@@ -15,9 +15,11 @@
         @io.emit 'msg', msg
 
       source_of: (key) ->
-        key = fromJS key
+        key = Immutable.fromJS key
         @source.filter (msg) -> Immutable.is key, msg.get 'key'
 
     module.exports = RedRingSocketioClient
     most = require 'most'
-    {fromJS} = Immutable = require 'immutable'
+    Immutable = require 'immutable'
+    reviver = require 'ccnq4-kitty/reviver'
+    fromJS = (x) -> Immutable.fromJS x, reviver
