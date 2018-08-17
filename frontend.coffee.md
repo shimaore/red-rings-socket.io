@@ -23,10 +23,12 @@ request contains headers such as Cookie, handshake contains headers, query, … 
         .filter operation NOTIFY
         .forEach (msg) ->
           socket.emit 'msg', msg.toJS()
+        .catch console.error
 
         client_policy
         .take 1
         .forEach -> socket.emit 'ready'
+        .catch console.error
 
         return
 
