@@ -7,7 +7,7 @@ A socket.io server used as front-end for abrasive-ducks
 
 request contains headers such as Cookie, handshake contains headers, query, … see https://socket.io/docs/server-api/#socket-handshake
 
-        client_policy = build_client_policy socket.request, socket.handshake
+        client_policy = build_client_policy socket
           .multicast()
 
         client_disconnect = most.fromEvent 'disconnect', socket
